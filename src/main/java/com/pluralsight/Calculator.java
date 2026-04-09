@@ -13,5 +13,21 @@ public class Calculator {
 
         System.out.print("Enter the second number: ");
 
+        int secondNumber = scanner.nextInt();
+
+        scanner.nextLine();
+
+        System.out.println("Possible calculations: ");
+        System.out.println("    (A)dd");
+        System.out.println("    (S)ubtract");
+        System.out.println("    (M)ultiply");
+        System.out.println("    (D)ivide");
+        System.out.print("Please select an option: ");
+
+        String calculationOption = scanner.nextLine();
+
+        int productOfNumbers = firstNumber * secondNumber;
+
+        System.out.println(firstNumber + " * " + secondNumber + " = " + productOfNumbers);
     }
 }
