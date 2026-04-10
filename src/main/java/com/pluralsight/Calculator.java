@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Calculator {
@@ -27,7 +28,18 @@ public class Calculator {
         String calculationOption = scanner.nextLine();
 
         int productOfNumbers = firstNumber * secondNumber;
+        int sumOfNumbers = firstNumber + secondNumber;
+        int quotientOfNumbers = firstNumber / secondNumber;
+        int differenceOfNumbers = firstNumber - secondNumber;
 
-        System.out.println(firstNumber + " * " + secondNumber + " = " + productOfNumbers);
+        if (Objects.equals(calculationOption, "A")) {
+            System.out.println(firstNumber + " + " + secondNumber + " = " + sumOfNumbers);
+        } else if (Objects.equals(calculationOption, "S")) {
+            System.out.println(firstNumber + " - " + secondNumber + " = " + differenceOfNumbers);
+        } else if (Objects.equals(calculationOption, "M")) {
+            System.out.println(firstNumber + " * " + secondNumber + " = " + productOfNumbers);
+        } else if (Objects.equals(calculationOption, "D")) {
+            System.out.println(firstNumber + " / " + secondNumber + " = " + quotientOfNumbers);
+        }
     }
 }
